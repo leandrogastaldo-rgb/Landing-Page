@@ -23,15 +23,14 @@ VARIÁVEIS DE CORES — TEMA ESCURO PADRÃO
 }
 
 /* =========================================================
-RESET
+RESET (Corrigido: adicionado o seletor *)
 ========================================================= */
 
-{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 /* =========================================================
 NAVEGAÇÃO SUAVE
 ========================================================= */
@@ -56,34 +55,25 @@ overflow-x: hidden;
 }
 
 /* =========================================================
-CABEÇALHO — GLASSMORPHISM
+CABEÇALHO — GLASSMORPHISM (Ajustado)
 ========================================================= */
 
 .navbar {
-
-width: 100%;
-max-width: 100%;
-min-height: 80px;
-
-position: sticky;
-top: 0;
-
-z-index: 1000;
-
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-padding: 0 clamp(20px, 4vw, 70px);
-
-background: var(--bg-header);
-
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  min-height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 70px);
+  background: var(--bg-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box; /* Garante que o padding não estoure a tela */
 }
-
 /* Logo */
 
 .logo {

@@ -23,7 +23,7 @@ VARIÁVEIS DE CORES — TEMA ESCURO PADRÃO
 }
 
 /* =========================================================
-RESET (Corrigido: adicionado o seletor *)
+RESET
 ========================================================= */
 
 * {
@@ -31,6 +31,7 @@ RESET (Corrigido: adicionado o seletor *)
   margin: 0;
   padding: 0;
 }
+
 /* =========================================================
 NAVEGAÇÃO SUAVE
 ========================================================= */
@@ -55,7 +56,7 @@ overflow-x: hidden;
 }
 
 /* =========================================================
-CABEÇALHO — GLASSMORPHISM (Ajustado)
+CABEÇALHO — GLASSMORPHISM
 ========================================================= */
 
 .navbar {
@@ -72,8 +73,9 @@ CABEÇALHO — GLASSMORPHISM (Ajustado)
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box; /* Garante que o padding não estoure a tela */
+  box-sizing: border-box;
 }
+
 /* Logo */
 
 .logo {
@@ -358,8 +360,7 @@ font-size: 17px;
 }
 
 /* =========================================================
-RECURSO DE RESPONSIVIDADE 1
-GRID DINÂMICO
+RESPONSIVIDADE — GRID DINÂMICO
 ========================================================= */
 
 .cards {
@@ -653,7 +654,6 @@ border-top: 1px solid var(--color-border);
 }
 
 /* =========================================================
-RECURSO DE ADAPTABILIDADE 1
 MODO CLARO AUTOMÁTICO
 ========================================================= */
 
@@ -681,37 +681,33 @@ MODO CLARO AUTOMÁTICO
 
 --color-price: #0284C7;
 
-
 }
 
 .navbar {
 
 border-bottom:
-  1px solid rgba(15, 23, 42, 0.1);
-
+1px solid rgba(15, 23, 42, 0.1);
 
 }
 
 .product-image {
 
 box-shadow:
-  0 20px 40px rgba(15, 23, 42, 0.15);
-
+0 20px 40px rgba(15, 23, 42, 0.15);
 
 }
 
 .card:hover {
 
 box-shadow:
-  0 12px 30px rgba(79, 70, 229, 0.15);
-
+0 12px 30px rgba(79, 70, 229, 0.15);
 
 }
+
 }
 
 /* =========================================================
-RECURSO DE RESPONSIVIDADE 2
-BREAKPOINT — TABLET / CELULAR
+RESPONSIVIDADE — TABLET / CELULAR
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -726,7 +722,6 @@ flex-direction: column;
 
 gap: 16px;
 
-
 }
 
 .nav-links {
@@ -739,13 +734,11 @@ flex-wrap: wrap;
 
 gap: 10px 16px;
 
-
 }
 
 .nav-links a {
 
 font-size: 14px;
-
 
 }
 
@@ -754,7 +747,6 @@ font-size: 14px;
 width: 110px;
 
 height: 38px;
-
 
 }
 
@@ -772,7 +764,6 @@ padding: 50px 20px;
 
 text-align: center;
 
-
 }
 
 .hero-content {
@@ -781,13 +772,11 @@ max-width: 100%;
 
 margin: 0 auto;
 
-
 }
 
 .launch-tag {
 
 margin-bottom: 20px;
-
 
 }
 
@@ -796,7 +785,6 @@ h1 {
 font-size: 38px;
 
 line-height: 1.1;
-
 
 }
 
@@ -809,13 +797,11 @@ margin-right: auto;
 
 font-size: 16px;
 
-
 }
 
 .cta {
 
 margin: 0 auto;
-
 
 }
 
@@ -833,7 +819,6 @@ aspect-ratio: 631 / 436;
 
 justify-self: center;
 
-
 }
 
 /* Benefícios */
@@ -842,29 +827,20 @@ justify-self: center;
 
 padding: 60px 20px;
 
-
 }
 
 .benefits-header h2 {
 
 font-size: 28px;
 
-
 }
-
-/*
-O Grid continua dinâmico.
-Os cards passam automaticamente para
-novas linhas conforme o espaço disponível.
-*/
 
 .cards {
 
 grid-template-columns:
-  repeat(auto-fit, minmax(280px, 1fr));
+repeat(auto-fit, minmax(280px, 1fr));
 
 gap: 24px;
-
 
 }
 
@@ -874,13 +850,11 @@ gap: 24px;
 
 padding: 50px 20px;
 
-
 }
 
 .spec-grid {
 
 grid-template-columns: 1fr;
-
 
 }
 
@@ -890,13 +864,11 @@ grid-template-columns: 1fr;
 
 padding: 60px 20px;
 
-
 }
 
 .faq-container h2 {
 
 font-size: 28px;
-
 
 }
 
@@ -912,13 +884,11 @@ AJUSTES ESPECÍFICOS PARA TELAS PEQUENAS
 
 padding: 16px;
 
-
 }
 
 .logo {
 
 font-size: 21px;
-
 
 }
 
@@ -926,13 +896,11 @@ font-size: 21px;
 
 gap: 8px 10px;
 
-
 }
 
 .nav-links a {
 
 font-size: 13px;
-
 
 }
 
@@ -942,20 +910,17 @@ width: 100px;
 
 font-size: 13px !important;
 
-
 }
 
 .hero {
 
 padding: 40px 16px;
 
-
 }
 
 h1 {
 
 font-size: 34px;
-
 
 }
 
@@ -965,13 +930,11 @@ font-size: 15px;
 
 line-height: 1.5;
 
-
 }
 
 .subtitle br {
 
 display: none;
-
 
 }
 
@@ -979,13 +942,11 @@ display: none;
 
 font-size: 28px;
 
-
 }
 
 .product-image {
 
 border-radius: 10px;
-
 
 }
 
@@ -995,16 +956,14 @@ padding-left: 16px;
 
 padding-right: 16px;
 
-
 }
 
 .cards {
 
 grid-template-columns:
-  minmax(0, 1fr);
+minmax(0, 1fr);
 
 gap: 20px;
-
 
 }
 
@@ -1014,7 +973,6 @@ min-width: 0;
 
 padding: 26px 20px;
 
-
 }
 
 .faq-section {
@@ -1023,13 +981,11 @@ padding-left: 16px;
 
 padding-right: 16px;
 
-
 }
 
 .faq-item summary {
 
 padding: 18px;
-
 
 }
 
@@ -1039,61 +995,74 @@ padding-left: 18px;
 
 padding-right: 18px;
 
-
 }
 
 footer {
 
 font-size: 12px;
 
-
 }
 
 }
 
 /* =========================================================
-   AJUSTE EXTRA — TELAS INTERMEDIÁRIAS
-   Evita cortes/overflow no cabeçalho e no HERO.
-   ========================================================= */
+AJUSTE EXTRA — TELAS INTERMEDIÁRIAS
+========================================================= */
 
 @media (max-width: 1100px) and (min-width: 769px) {
 
-  .navbar {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+.navbar {
 
-  .nav-links {
-    gap: 18px;
-  }
+padding-left: 28px;
+padding-right: 28px;
 
-  .nav-links a {
-    font-size: 14px;
-  }
+}
 
-  .nav-button {
-    width: 110px;
-  }
+.nav-links {
 
-  .hero {
-    padding-left: 28px;
-    padding-right: 28px;
-    gap: 24px;
-  }
+gap: 18px;
 
-  .product-image {
-    max-width: 100%;
-  }
+}
+
+.nav-links a {
+
+font-size: 14px;
+
+}
+
+.nav-button {
+
+width: 110px;
+
+}
+
+.hero {
+
+padding-left: 28px;
+padding-right: 28px;
+
+gap: 24px;
+
+}
+
+.product-image {
+
+max-width: 100%;
+
+}
+
 }
 
 /* =========================================================
-   PROTEÇÃO CONTRA OVERFLOW HORIZONTAL
-   ========================================================= */
+PROTEÇÃO CONTRA OVERFLOW HORIZONTAL
+========================================================= */
 
 img,
 video,
 iframe {
-  max-width: 100%;
+
+max-width: 100%;
+
 }
 
 .navbar,
@@ -1102,6 +1071,150 @@ iframe {
 .specifications,
 .faq-section,
 footer {
-  max-width: 100%;
+
+max-width: 100%;
+
 }
 
+
+/* =========================================================
+ACESSIBILIDADE — FOCO VISÍVEL
+========================================================= */
+
+/*
+   Permite identificar claramente qual elemento
+   está selecionado quando o usuário navega
+   utilizando a tecla TAB.
+*/
+
+:focus-visible {
+
+outline: 3px solid var(--color-primary);
+
+outline-offset: 4px;
+
+border-radius: 4px;
+
+}
+
+
+/* =========================================================
+ESTILIZAÇÃO PARA IMPRESSÃO
+========================================================= */
+
+/*
+   Ajusta a página quando o usuário imprimir
+   ou salvar o site como PDF.
+*/
+
+@media print {
+
+/* Esconde elementos de navegação e botões */
+
+.navbar,
+.nav-links,
+.nav-button,
+.cta {
+
+display: none !important;
+
+}
+
+
+/* Fundo branco para economizar tinta */
+
+body,
+.hero,
+.benefits-section,
+.specifications,
+.faq-section,
+footer {
+
+background: #FFFFFF !important;
+
+color: #000000 !important;
+
+}
+
+
+/* Textos em preto */
+
+.logo,
+h1,
+h2,
+h3,
+.subtitle,
+.price,
+.benefits-header p,
+.card p,
+.spec-grid,
+.spec-grid span,
+.faq-subtitle,
+.faq-item summary,
+.faq-item p,
+footer {
+
+color: #000000 !important;
+
+}
+
+
+/* Remove efeitos visuais desnecessários */
+
+.product-image {
+
+box-shadow: none !important;
+
+background: #FFFFFF !important;
+
+}
+
+
+/* Cards com borda simples */
+
+.card,
+.spec-grid span,
+.faq-item {
+
+border: 1px solid #CCCCCC !important;
+
+background: transparent !important;
+
+break-inside: avoid;
+
+}
+
+
+/* Evita que seções sejam cortadas entre páginas */
+
+section,
+article,
+.faq-item {
+
+break-inside: avoid;
+
+}
+
+
+/* Mantém a imagem dentro da página */
+
+.product-image img {
+
+max-width: 500px;
+
+}
+
+
+/* Remove o gradiente do título para impressão */
+
+h1 {
+
+background: none !important;
+
+-webkit-text-fill-color: #000000 !important;
+
+color: #000000 !important;
+
+}
+
+}

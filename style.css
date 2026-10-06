@@ -1,1107 +1,613 @@
 /* =========================================================
-VARIÁVEIS DE CORES — TEMA ESCURO PADRÃO
-========================================================= */
-
-:root {
-
---bg-main: #0F172A;
---bg-card: #1E293B;
---bg-header: rgba(30, 41, 59, 0.75);
-
---color-primary: #6366F1;
---color-primary-hover: #4F46E5;
-
---color-secondary: #EC4899;
-
---color-text: #F8FAFC;
---color-text-muted: #94A3B8;
-
---color-border: #334155;
-
---color-price: #38BDF8;
-
-}
-
-/* =========================================================
-RESET (Corrigido: adicionado o seletor *)
-========================================================= */
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* =========================================================
-NAVEGAÇÃO SUAVE
-========================================================= */
 
 html {
-scroll-behavior: smooth;
-scroll-padding-top: 90px;
+    scroll-behavior: smooth;
 }
-
-/* =========================================================
-BODY
-========================================================= */
 
 body {
-
-font-family: Arial, Helvetica, sans-serif;
-
-background: var(--bg-main);
-color: var(--color-text);
-
-overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F172A;
+    color: #F8FAFC;
+    line-height: 1.6;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 
 /* =========================================================
-CABEÇALHO — GLASSMORPHISM (Ajustado)
-========================================================= */
+   CABEÇALHO
+   ========================================================= */
 
 .navbar {
-  width: 100%;
-  min-height: 80px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 clamp(20px, 4vw, 70px);
-  background: var(--bg-header);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box; /* Garante que o padding não estoure a tela */
+    width: 100%;
+    min-height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #1E293B;
+    border-bottom: 1px solid #334155;
 }
-/* Logo */
 
 .logo {
-
-color: var(--color-primary);
-
-font-size: 24px;
-font-weight: 700;
-
-text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #F8FAFC;
 }
 
-/* Menu */
-
 .nav-links {
-
-display: flex;
-align-items: center;
-
-gap: 28px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
-
-color: var(--color-text-muted);
-
-font-size: 16px;
-font-weight: 600;
-
-text-decoration: none;
-
-transition: color 0.3s ease;
+    color: #CBD5E1;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-
-color: var(--color-text);
+    color: #38BDF8;
 }
 
-/* Botão */
-
 .nav-button {
-
-width: 130px;
-max-width: 100%;
-flex-shrink: 1;
-height: 40px;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-background: var(--color-primary);
-
-color: #FFFFFF !important;
-
-border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #6366F1;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .nav-button:hover {
-
-background: var(--color-primary-hover);
+    background-color: #4F46E5;
+    transform: translateY(-2px);
 }
 
+
 /* =========================================================
-HERO — DESKTOP
-========================================================= */
+   HERO
+   ========================================================= */
 
 .hero {
+    min-height: 650px;
+    padding: 80px 8%;
 
-min-height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
 
-display: grid;
-
-grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-
-align-items: center;
-
-gap: 40px;
-
-padding: 60px clamp(20px, 4vw, 70px);
-
-background: var(--bg-main);
+    background-color: #0F172A;
 }
 
 .hero-content {
-
-width: 100%;
-max-width: 620px;
+    max-width: 600px;
 }
-
-/* Tag */
 
 .launch-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 7px 14px;
 
-display: inline-flex;
+    border: 1px solid #6366F1;
+    border-radius: 20px;
 
-align-items: center;
-justify-content: center;
-
-width: 140px;
-height: 28px;
-
-border-radius: 20px;
-
-background: var(--color-primary);
-
-color: #FFFFFF;
-
-font-size: 12px;
-font-weight: 700;
-
-margin-bottom: 24px;
+    color: #A5B4FC;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/* =========================================================
-TÍTULO COM DEGRADÊ
-========================================================= */
+.hero h1 {
+    margin-bottom: 20px;
 
-h1 {
-
-font-size: 44px;
-
-line-height: 1.08;
-
-font-weight: 700;
-
-margin-bottom: 22px;
-
-background: linear-gradient(
-135deg,
-#FFFFFF 0%,
-#6366F1 50%,
-#EC4899 100%
-);
-
--webkit-background-clip: text;
-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-color: transparent;
+    color: #F8FAFC;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.1;
 }
-
-/* Subtítulo */
 
 .subtitle {
+    max-width: 550px;
+    margin-bottom: 25px;
 
-color: var(--color-text-muted);
-
-font-size: 18px;
-
-line-height: 1.5;
-
-font-weight: 600;
-
-margin-bottom: 32px;
-
-max-width: 600px;
+    color: #94A3B8;
+    font-size: 18px;
 }
-
-/* Preço */
 
 .price {
+    margin-bottom: 30px;
 
-color: var(--color-price);
-
-font-size: 32px;
-
-line-height: 1;
-
-font-weight: 700;
-
-margin-bottom: 28px;
+    color: #38BDF8;
+    font-size: 32px;
+    font-weight: 700;
 }
 
-/* CTA */
-
 .cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-width: 200px;
-min-height: 52px;
+    min-width: 200px;
+    min-height: 52px;
+    padding: 0 25px;
 
-display: inline-flex;
+    border-radius: 8px;
+    background-color: #6366F1;
 
-align-items: center;
-justify-content: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
 
-background: var(--color-primary);
-
-color: #FFFFFF;
-
-border-radius: 8px;
-
-font-size: 18px;
-font-weight: 700;
-
-text-decoration: none;
-
-transition: all 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .cta:hover {
-
-background: var(--color-primary-hover);
-
-transform: translateY(-2px);
-
-box-shadow:
-0 8px 20px rgba(99, 102, 241, 0.3);
+    background-color: #4F46E5;
+    transform: translateY(-2px);
 }
 
-/* =========================================================
-IMAGEM DO PRODUTO
-========================================================= */
-
 .product-image {
-
-width: 100%;
-max-width: min(631px, 100%);
-
-height: 436px;
-
-justify-self: end;
-
-overflow: hidden;
-
-background: #FFFFFF;
-
-border-radius: 12px;
-
-border: 1px solid var(--color-border);
-
-box-shadow:
-0 20px 40px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image img {
+    width: 100%;
+    max-width: 631px;
+    height: auto;
 
-width: 100%;
-height: 100%;
-
-object-fit: cover;
-
-display: block;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
+
 /* =========================================================
-BENEFÍCIOS
-========================================================= */
+   BENEFÍCIOS
+   ========================================================= */
 
 .benefits-section {
+    padding: 90px 8%;
 
-padding: 80px clamp(20px, 4vw, 70px);
-
-background: var(--bg-main);
+    background-color: #1E293B;
 }
 
 .benefits-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
 
-text-align: center;
-
-margin-bottom: 48px;
+    text-align: center;
 }
 
 .benefits-header h2 {
+    margin-bottom: 12px;
 
-color: var(--color-text);
-
-font-size: 32px;
-
-line-height: 1.2;
-
-margin-bottom: 12px;
+    color: #F8FAFC;
+    font-size: 36px;
 }
 
 .benefits-header p {
-
-color: var(--color-text-muted);
-
-font-size: 17px;
+    color: #94A3B8;
+    font-size: 17px;
 }
-
-/* =========================================================
-RECURSO DE RESPONSIVIDADE 1
-GRID DINÂMICO
-========================================================= */
 
 .cards {
+    max-width: 1150px;
+    margin: 0 auto;
 
-display: grid;
-
-grid-template-columns:
-repeat(auto-fit, minmax(280px, 1fr));
-
-gap: 32px;
-
-width: 100%;
-
-max-width: 1200px;
-
-margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
-
-/* Card */
 
 .card {
+    min-height: 220px;
+    padding: 30px;
 
-width: 100%;
+    border: 1px solid #334155;
+    border-radius: 12px;
 
-min-height: 220px;
+    background-color: #0F172A;
 
-padding: 32px;
+    text-align: center;
 
-border: 1px solid var(--color-border);
-
-border-radius: 12px;
-
-background: var(--bg-card);
-
-text-align: center;
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-justify-content: flex-start;
-
-gap: 12px;
-
-transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* Hover */
-
 .card:hover {
-
-transform: translateY(-8px);
-
-border-color: var(--color-primary);
-
-box-shadow:
-0 12px 30px rgba(99, 102, 241, 0.2);
+    transform: translateY(-5px);
+    border-color: #6366F1;
 }
 
 .emoji {
-
-font-size: 36px;
-
-line-height: 1;
-
-margin-bottom: 4px;
+    margin-bottom: 15px;
+    font-size: 38px;
 }
 
 .card h3 {
+    margin-bottom: 10px;
 
-color: var(--color-text);
-
-font-size: 20px;
-
-font-weight: 700;
+    color: #F8FAFC;
+    font-size: 22px;
 }
 
 .card p {
-
-color: var(--color-text-muted);
-
-font-size: 14px;
-
-line-height: 1.5;
-
-font-weight: 600;
+    color: #94A3B8;
+    font-size: 15px;
 }
 
+
 /* =========================================================
-ESPECIFICAÇÕES
-========================================================= */
+   ESPECIFICAÇÕES
+   ========================================================= */
 
 .specifications {
+    padding: 90px 8%;
 
-padding: 60px clamp(20px, 4vw, 70px);
+    background-color: #0F172A;
 
-background: var(--bg-main);
+    text-align: center;
 }
 
 .specifications h2 {
+    margin-bottom: 40px;
 
-text-align: center;
-
-color: var(--color-text);
-
-font-size: 32px;
-
-margin-bottom: 26px;
+    color: #F8FAFC;
+    font-size: 36px;
 }
 
 .spec-grid {
+    max-width: 900px;
+    margin: 0 auto;
 
-width: 100%;
-
-max-width: 900px;
-
-margin: auto;
-
-display: grid;
-
-grid-template-columns: 1fr 1fr;
-
-gap: 14px;
-
-color: var(--color-text-muted);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
+.spec-grid span {
+    padding: 20px;
+
+    border: 1px solid #334155;
+    border-radius: 8px;
+
+    background-color: #1E293B;
+    color: #CBD5E1;
+}
+
+
 /* =========================================================
-FAQ — ADAPTABILIDADE
-========================================================= */
+   FAQ
+   ========================================================= */
 
 .faq-section {
+    padding: 90px 8%;
 
-padding: 80px 70px;
-
-background: var(--bg-main);
+    background-color: #1E293B;
 }
 
 .faq-container {
-
-width: 100%;
-
-max-width: 850px;
-
-margin: 0 auto;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .faq-container h2 {
+    margin-bottom: 10px;
 
-color: var(--color-text);
+    color: #F8FAFC;
+    font-size: 36px;
 
-text-align: center;
-
-font-size: 32px;
-
-margin-bottom: 12px;
+    text-align: center;
 }
 
 .faq-subtitle {
+    margin-bottom: 40px;
 
-color: var(--color-text-muted);
-
-text-align: center;
-
-font-size: 17px;
-
-margin-bottom: 36px;
+    color: #94A3B8;
+    text-align: center;
 }
-
-/* Lista */
 
 .faq-list {
-
-display: flex;
-
-flex-direction: column;
-
-gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-
-/* Cada pergunta */
 
 .faq-item {
+    border: 1px solid #334155;
+    border-radius: 8px;
 
-background: var(--bg-card);
+    background-color: #0F172A;
 
-border: 1px solid var(--color-border);
-
-border-radius: 10px;
-
-overflow: hidden;
+    overflow: hidden;
 }
-
-/* Pergunta clicável */
 
 .faq-item summary {
+    padding: 20px;
 
-padding: 20px 24px;
+    cursor: pointer;
 
-color: var(--color-text);
+    color: #F8FAFC;
+    font-size: 17px;
+    font-weight: 700;
 
-font-size: 17px;
-
-font-weight: 700;
-
-cursor: pointer;
-
-list-style: none;
-
-transition: background 0.3s ease;
+    list-style: none;
 }
-
-/* Remove marcador padrão */
 
 .faq-item summary::-webkit-details-marker {
-
-display: none;
+    display: none;
 }
-
-/* Ícone + */
 
 .faq-item summary::after {
+    content: "+";
 
-content: "+";
+    float: right;
 
-float: right;
-
-color: var(--color-primary);
-
-font-size: 24px;
-
-line-height: 1;
+    color: #38BDF8;
+    font-size: 22px;
 }
-
-/* Ícone - quando aberto */
 
 .faq-item[open] summary::after {
-
-content: "−";
-}
-
-/* Hover */
-
-.faq-item summary:hover {
-
-background: rgba(99, 102, 241, 0.08);
-}
-
-/* Resposta */
-
-.faq-item p {
-
-padding: 0 24px 20px;
-
-color: var(--color-text-muted);
-
-font-size: 15px;
-
-line-height: 1.6;
-}
-
-/* =========================================================
-RODAPÉ
-========================================================= */
-
-footer {
-
-min-height: 80px;
-
-background: var(--bg-card);
-
-color: var(--color-text-muted);
-
-display: flex;
-
-align-items: center;
-
-justify-content: center;
-
-text-align: center;
-
-padding: 20px;
-
-font-size: 14px;
-
-font-weight: 600;
-
-border-top: 1px solid var(--color-border);
-}
-
-/* =========================================================
-RECURSO DE ADAPTABILIDADE 1
-MODO CLARO AUTOMÁTICO
-========================================================= */
-
-@media (prefers-color-scheme: light) {
-
-:root {
-
---bg-main: #F8FAFC;
-
---bg-card: #FFFFFF;
-
---bg-header: rgba(255, 255, 255, 0.78);
-
---color-primary: #4F46E5;
-
---color-primary-hover: #4338CA;
-
---color-secondary: #DB2777;
-
---color-text: #0F172A;
-
---color-text-muted: #475569;
-
---color-border: #CBD5E1;
-
---color-price: #0284C7;
-
-
-}
-
-.navbar {
-
-border-bottom:
-  1px solid rgba(15, 23, 42, 0.1);
-
-
-}
-
-.product-image {
-
-box-shadow:
-  0 20px 40px rgba(15, 23, 42, 0.15);
-
-
-}
-
-.card:hover {
-
-box-shadow:
-  0 12px 30px rgba(79, 70, 229, 0.15);
-
-
-}
-}
-
-/* =========================================================
-RECURSO DE RESPONSIVIDADE 2
-BREAKPOINT — TABLET / CELULAR
-========================================================= */
-
-@media (max-width: 768px) {
-
-/* Header */
-
-.navbar {
-
-padding: 16px 20px;
-
-flex-direction: column;
-
-gap: 16px;
-
-
-}
-
-.nav-links {
-
-width: 100%;
-
-justify-content: center;
-
-flex-wrap: wrap;
-
-gap: 10px 16px;
-
-
-}
-
-.nav-links a {
-
-font-size: 14px;
-
-
-}
-
-.nav-button {
-
-width: 110px;
-
-height: 38px;
-
-
-}
-
-/* =====================================================
-HERO EMPILHADO
-===================================================== */
-
-.hero {
-
-grid-template-columns: 1fr;
-
-gap: 40px;
-
-padding: 50px 20px;
-
-text-align: center;
-
-
-}
-
-.hero-content {
-
-max-width: 100%;
-
-margin: 0 auto;
-
-
-}
-
-.launch-tag {
-
-margin-bottom: 20px;
-
-
-}
-
-h1 {
-
-font-size: 38px;
-
-line-height: 1.1;
-
-
-}
-
-.subtitle {
-
-max-width: 600px;
-
-margin-left: auto;
-margin-right: auto;
-
-font-size: 16px;
-
-
-}
-
-.cta {
-
-margin: 0 auto;
-
-
-}
-
-/* Imagem */
-
-.product-image {
-
-width: 100%;
-
-max-width: 631px;
-
-height: auto;
-
-aspect-ratio: 631 / 436;
-
-justify-self: center;
-
-
-}
-
-/* Benefícios */
-
-.benefits-section {
-
-padding: 60px 20px;
-
-
-}
-
-.benefits-header h2 {
-
-font-size: 28px;
-
-
-}
-
-/*
-O Grid continua dinâmico.
-Os cards passam automaticamente para
-novas linhas conforme o espaço disponível.
-*/
-
-.cards {
-
-grid-template-columns:
-  repeat(auto-fit, minmax(280px, 1fr));
-
-gap: 24px;
-
-
-}
-
-/* Especificações */
-
-.specifications {
-
-padding: 50px 20px;
-
-
-}
-
-.spec-grid {
-
-grid-template-columns: 1fr;
-
-
-}
-
-/* FAQ */
-
-.faq-section {
-
-padding: 60px 20px;
-
-
-}
-
-.faq-container h2 {
-
-font-size: 28px;
-
-
-}
-
-}
-
-/* =========================================================
-AJUSTES ESPECÍFICOS PARA TELAS PEQUENAS
-========================================================= */
-
-@media (max-width: 480px) {
-
-.navbar {
-
-padding: 16px;
-
-
-}
-
-.logo {
-
-font-size: 21px;
-
-
-}
-
-.nav-links {
-
-gap: 8px 10px;
-
-
-}
-
-.nav-links a {
-
-font-size: 13px;
-
-
-}
-
-.nav-button {
-
-width: 100px;
-
-font-size: 13px !important;
-
-
-}
-
-.hero {
-
-padding: 40px 16px;
-
-
-}
-
-h1 {
-
-font-size: 34px;
-
-
-}
-
-.subtitle {
-
-font-size: 15px;
-
-line-height: 1.5;
-
-
-}
-
-.subtitle br {
-
-display: none;
-
-
-}
-
-.price {
-
-font-size: 28px;
-
-
-}
-
-.product-image {
-
-border-radius: 10px;
-
-
-}
-
-.benefits-section {
-
-padding-left: 16px;
-
-padding-right: 16px;
-
-
-}
-
-.cards {
-
-grid-template-columns:
-  minmax(0, 1fr);
-
-gap: 20px;
-
-
-}
-
-.card {
-
-min-width: 0;
-
-padding: 26px 20px;
-
-
-}
-
-.faq-section {
-
-padding-left: 16px;
-
-padding-right: 16px;
-
-
-}
-
-.faq-item summary {
-
-padding: 18px;
-
-
+    content: "−";
 }
 
 .faq-item p {
+    padding: 0 20px 20px;
 
-padding-left: 18px;
-
-padding-right: 18px;
-
-
+    color: #94A3B8;
 }
 
-footer {
-
-font-size: 12px;
-
-
-}
-
-}
 
 /* =========================================================
-   AJUSTE EXTRA — TELAS INTERMEDIÁRIAS
-   Evita cortes/overflow no cabeçalho e no HERO.
+   RODAPÉ
    ========================================================= */
 
-@media (max-width: 1100px) and (min-width: 769px) {
+footer {
+    padding: 30px 8%;
 
-  .navbar {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+    border-top: 1px solid #334155;
 
-  .nav-links {
-    gap: 18px;
-  }
+    background-color: #0F172A;
 
-  .nav-links a {
+    color: #94A3B8;
+
+    text-align: center;
     font-size: 14px;
-  }
-
-  .nav-button {
-    width: 110px;
-  }
-
-  .hero {
-    padding-left: 28px;
-    padding-right: 28px;
-    gap: 24px;
-  }
-
-  .product-image {
-    max-width: 100%;
-  }
 }
+
 
 /* =========================================================
-   PROTEÇÃO CONTRA OVERFLOW HORIZONTAL
+   ACESSIBILIDADE
+   Navegação utilizando somente o teclado / tecla TAB
    ========================================================= */
 
-img,
-video,
-iframe {
-  max-width: 100%;
+:focus-visible {
+    outline: 3px solid #38BDF8;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
-.navbar,
-.hero,
-.benefits-section,
-.specifications,
-.faq-section,
-footer {
-  max-width: 100%;
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-image {
+        order: -1;
+    }
+
+    .product-image img {
+        max-width: 550px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
 }
 
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 8px 15px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .benefits-section,
+    .specifications,
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .benefits-header h2,
+    .specifications h2,
+    .faq-container h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    footer {
+        padding: 25px 20px;
+    }
+}
+
+
+/* =========================================================
+   ESTILIZAÇÃO PARA IMPRESSÃO
+   ========================================================= */
+
+@media print {
+
+    /* Esconde elementos de navegação e elementos
+       desnecessários na impressão */
+
+    .navbar,
+    .nav-links,
+    .nav-button,
+    .cta {
+        display: none !important;
+    }
+
+
+    /* Fundo branco e texto preto
+       para economizar tinta */
+
+    body,
+    .hero,
+    .benefits-section,
+    .specifications,
+    .faq-section,
+    footer {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+    }
+
+
+    /* Ajusta textos para impressão */
+
+    h1,
+    h2,
+    h3,
+    .logo,
+    .price,
+    .launch-tag,
+    .benefits-header p,
+    .subtitle,
+    .card p,
+    .spec-grid span,
+    .faq-subtitle,
+    .faq-item p,
+    footer {
+        color: #000000 !important;
+    }
+
+
+    /* Remove efeitos desnecessários */
+
+    .card,
+    .spec-grid span,
+    .faq-item {
+        border: 1px solid #CCCCCC !important;
+        background: transparent !important;
+
+        break-inside: avoid;
+    }
+
+
+    /* Mantém os cards organizados */
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Evita que a imagem fique grande demais */
+
+    .product-image img {
+        max-width: 500px;
+    }
+
+
+    /* Evita elementos cortados entre páginas */
+
+    section,
+    article,
+    .faq-item {
+        break-inside: avoid;
+    }
+
+}

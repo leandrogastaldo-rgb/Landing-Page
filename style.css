@@ -195,7 +195,7 @@ margin-bottom: 24px;
 TÍTULO COM DEGRADÊ
 ========================================================= */
 
-h1 {
+.hero h1 {
 
 font-size: 44px;
 
@@ -780,7 +780,7 @@ margin-bottom: 20px;
 
 }
 
-h1 {
+.hero h1 {
 
 font-size: 38px;
 
@@ -918,7 +918,7 @@ padding: 40px 16px;
 
 }
 
-h1 {
+.hero h1 {
 
 font-size: 34px;
 
@@ -1076,16 +1076,9 @@ max-width: 100%;
 
 }
 
-
 /* =========================================================
 ACESSIBILIDADE — FOCO VISÍVEL
 ========================================================= */
-
-/*
-   Permite identificar claramente qual elemento
-   está selecionado quando o usuário navega
-   utilizando a tecla TAB.
-*/
 
 :focus-visible {
 
@@ -1097,19 +1090,11 @@ border-radius: 4px;
 
 }
 
-
 /* =========================================================
 ESTILIZAÇÃO PARA IMPRESSÃO
 ========================================================= */
 
-/*
-   Ajusta a página quando o usuário imprimir
-   ou salvar o site como PDF.
-*/
-
 @media print {
-
-/* Esconde elementos de navegação e botões */
 
 .navbar,
 .nav-links,
@@ -1119,9 +1104,6 @@ ESTILIZAÇÃO PARA IMPRESSÃO
 display: none !important;
 
 }
-
-
-/* Fundo branco para economizar tinta */
 
 body,
 .hero,
@@ -1136,11 +1118,8 @@ color: #000000 !important;
 
 }
 
-
-/* Textos em preto */
-
 .logo,
-h1,
+.hero h1,
 h2,
 h3,
 .subtitle,
@@ -1158,9 +1137,6 @@ color: #000000 !important;
 
 }
 
-
-/* Remove efeitos visuais desnecessários */
-
 .product-image {
 
 box-shadow: none !important;
@@ -1168,9 +1144,6 @@ box-shadow: none !important;
 background: #FFFFFF !important;
 
 }
-
-
-/* Cards com borda simples */
 
 .card,
 .spec-grid span,
@@ -1184,9 +1157,6 @@ break-inside: avoid;
 
 }
 
-
-/* Evita que seções sejam cortadas entre páginas */
-
 section,
 article,
 .faq-item {
@@ -1195,19 +1165,13 @@ break-inside: avoid;
 
 }
 
-
-/* Mantém a imagem dentro da página */
-
 .product-image img {
 
 max-width: 500px;
 
 }
 
-
-/* Remove o gradiente do título para impressão */
-
-h1 {
+.hero h1 {
 
 background: none !important;
 

@@ -73,6 +73,30 @@
 </head>
 
 
+
+<script>
+    const formularioNewsletter = document.querySelector(".newsletter__form");
+
+    formularioNewsletter.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const email = document.querySelector("#email-input").value;
+
+        alert("Demonstração concluída! O e-mail " + email +
+              " foi validado, mas não foi cadastrado de verdade.");
+
+        formularioNewsletter.reset();
+    });
+</script>
+
+
+
+
+
+
+
+
+
 <body>
 
     <!-- =====================================================

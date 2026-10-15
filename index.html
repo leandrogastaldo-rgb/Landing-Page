@@ -74,29 +74,6 @@
 
 
 
-<script>
-    const formularioNewsletter = document.querySelector(".newsletter__form");
-
-    formularioNewsletter.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const email = document.querySelector("#email-input").value;
-
-        alert("Demonstração concluída! O e-mail " + email +
-              " foi validado, mas não foi cadastrado de verdade.");
-
-        formularioNewsletter.reset();
-    });
-</script>
-
-
-
-
-
-
-
-
-
 <body>
 
     <!-- =====================================================
@@ -392,6 +369,22 @@
         © 2026 Paty Calçados. Todos os direitos reservados.
 
     </footer>
+    
+    <script>
+        const formularioNewsletter = document.querySelector(".newsletter__form");
+
+        formularioNewsletter.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.querySelector("#email-input").value;
+
+            alert("Demonstração concluída! O e-mail " + email +
+                " foi validado, mas não foi cadastrado de verdade.");
+
+            formularioNewsletter.reset();
+        });
+    </script>
+
 
 
 </body>

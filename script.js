@@ -36,3 +36,38 @@ formNewsletter.addEventListener('submit', function(event) {
     }
 });
 
+
+
+
+// ==========================================================================
+// MÓDULO 3 — AULA 2: MENU MOBILE E ALTERNADOR DE TEMA VIA classList.toggle
+// ==========================================================================
+
+// 1. LÓGICA DO MENU MOBILE
+const menuToggle = document.querySelector('#menu-toggle');
+const headerNav = document.querySelector('#header-nav');
+
+if (menuToggle && headerNav) {
+    menuToggle.addEventListener('click', function() {
+        // Alterna a classe que exibe/oculta o menu no CSS
+        headerNav.classList.toggle('header__nav--active');
+    });
+}
+
+// 2. LÓGICA DO ALTERNADOR DE TEMA (DARK / LIGHT MODE)
+const themeToggle = document.querySelector('#theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+        // Alterna a classe 'light-theme' no <body>
+        document.body.classList.toggle('light-theme');
+
+        // Troca o ícone de Lua (🌙) para Sol (☀️) dependendo do estado
+        if (document.body.classList.contains('light-theme')) {
+            themeIcon.textContent = '☀️';
+        } else {
+            themeIcon.textContent = '🌙';
+        }
+    });
+}

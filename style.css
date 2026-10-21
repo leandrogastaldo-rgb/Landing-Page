@@ -657,54 +657,44 @@ border-top: 1px solid var(--color-border);
 MODO CLARO AUTOMÁTICO
 ========================================================= */
 
-@media (prefers-color-scheme: light) {
 
-:root {
+/* =========================================================
+TEMA CLARO — ATIVADO PELO BOTÃO
+========================================================= */
 
---bg-main: #F8FAFC;
+body.light-theme {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-header: rgba(255, 255, 255, 0.78);
 
---bg-card: #FFFFFF;
+    --color-primary: #4F46E5;
+    --color-primary-hover: #4338CA;
+    --color-secondary: #DB2777;
 
---bg-header: rgba(255, 255, 255, 0.78);
-
---color-primary: #4F46E5;
-
---color-primary-hover: #4338CA;
-
---color-secondary: #DB2777;
-
---color-text: #0F172A;
-
---color-text-muted: #475569;
-
---color-border: #CBD5E1;
-
---color-price: #0284C7;
-
+    --color-text: #0F172A;
+    --color-text-muted: #475569;
+    --color-border: #CBD5E1;
+    --color-price: #0284C7;
 }
 
-.navbar {
-
-border-bottom:
-1px solid rgba(15, 23, 42, 0.1);
-
+/* Mantém o efeito de vidro no cabeçalho */
+body.light-theme .navbar {
+    background: var(--bg-header);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-.product-image {
-
-box-shadow:
-0 20px 40px rgba(15, 23, 42, 0.15);
-
+/* Mantém a sombra da imagem no tema claro */
+body.light-theme .product-image {
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
 }
 
-.card:hover {
-
-box-shadow:
-0 12px 30px rgba(79, 70, 229, 0.15);
-
+/* Mantém o efeito de sombra dos cartões */
+body.light-theme .card:hover {
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
 }
 
-}
 
 /* =========================================================
 RESPONSIVIDADE — TABLET / CELULAR

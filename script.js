@@ -29,25 +29,27 @@ if (menuToggle && headerNav) {
 // ALTERNADOR DE TEMA
 // =========================================================
 
-const themeToggle = document.querySelector("#theme-toggle");
+cconst themeToggle = document.querySelector("#theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
 
 if (themeToggle && themeIcon) {
-    themeToggle.addEventListener("click", () => {
-        const temaClaro = document.body.classList.toggle("light-theme");
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("light-theme");
 
-        themeIcon.textContent = temaClaro ? "☀️" : "🌙";
+        const temaClaroAtivo =
+            document.body.classList.contains("light-theme");
 
-        themeToggle.setAttribute(
-            "aria-label",
-            temaClaro ? "Ativar tema escuro" : "Ativar tema claro"
-        );
-
-        themeToggle.setAttribute(
-            "title",
-            temaClaro ? "Ativar tema escuro" : "Ativar tema claro"
-        );
+        if (temaClaroAtivo) {
+            themeIcon.textContent = "☀️";
+            themeToggle.setAttribute("aria-label", "Ativar tema escuro");
+            themeToggle.setAttribute("title", "Ativar tema escuro");
+        } else {
+            themeIcon.textContent = "🌙";
+            themeToggle.setAttribute("aria-label", "Ativar tema claro");
+            themeToggle.setAttribute("title", "Ativar tema claro");
+        }
     });
+}
 }
 
 // =========================================================

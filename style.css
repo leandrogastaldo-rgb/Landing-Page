@@ -1333,3 +1333,46 @@ body.light-theme {
     --color-text-muted: #475569;
     --color-border: #e2e8f0;
 }
+
+/* TEMA CLARO */
+body.light-theme {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-header: rgba(255, 255, 255, 0.78);
+
+    --color-primary: #4F46E5;
+    --color-primary-hover: #4338CA;
+    --color-secondary: #DB2777;
+
+    --color-text: #0F172A;
+    --color-text-muted: #475569;
+    --color-border: #CBD5E1;
+    --color-price: #0284C7;
+}
+
+/* Preserva o efeito de vidro no tema claro */
+body.light-theme .navbar {
+    background: var(--bg-header);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+/* Aparência do botão de tema */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-icon:hover {
+    background: var(--bg-card);
+}

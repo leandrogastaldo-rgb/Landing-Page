@@ -639,31 +639,44 @@ section {
 }
 
 /* 14. TABLETS E TELAS MÉDIAS */
-@media (max-width: 1000px) {
-    .navbar {
-        gap: 14px;
-    }
 
-    .nav-links {
-        gap: 14px;
-    }
+/* TEMA CLARO MANUAL */
+body.light-theme {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-header: rgba(255, 255, 255, 0.75);
 
-    .nav-links a {
-        font-size: 0.88rem;
-    }
+    --color-primary: #4F46E5;
+    --color-primary-hover: #4338CA;
+    --color-secondary: #DB2777;
 
-    .hero {
-        gap: 35px;
-    }
-
-    .section {
-        padding: 65px 30px;
-    }
-
-    .product-card {
-        gap: 28px;
-    }
+    --color-text: #0F172A;
+    --color-text-muted: #475569;
+    --color-border: #CBD5E1;
+    --color-price: #0284C7;
 }
+
+/* Mantém o cabeçalho de vidro nos dois temas */
+.navbar {
+    background: var(--bg-header);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Mantém a aparência da imagem e dos cards */
+.product-image {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+body.light-theme .product-image {
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+}
+
+body.light-theme .card:hover {
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
+}
+
 
 /* 15. MENU MOBILE */
 @media (max-width: 768px) {
@@ -698,6 +711,50 @@ section {
         padding: 10px 0 4px;
         border-top: 1px solid var(--color-border);
     }
+
+/* CABEÇALHO MOBILE */
+.navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+.header__actions {
+    margin-left: auto;
+}
+
+.btn-menu {
+    display: inline-flex;
+}
+
+.nav-links {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Classe adicionada pelo JavaScript */
+.nav-links.nav-links--active {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 12px 8px;
+    font-size: 14px;
+}
+
+.nav-links .nav-button {
+    width: 100%;
+    max-width: none;
+    margin: 5px 0;
+}
 
     /* Esta classe é ativada pelo JavaScript */
     .nav-links.nav-links--active {
@@ -830,4 +887,61 @@ section {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+}
+
+
+
+/* BOTÕES DO CABEÇALHO */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-icon:hover {
+    background: var(--bg-card);
+}
+
+.btn-menu {
+    display: none;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 21px;
+    height: 2px;
+    display: block;
+    position: relative;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
 }

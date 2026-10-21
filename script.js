@@ -141,3 +141,59 @@ if (themeToggle && themeIcon) {
         }
     });
 }
+
+
+
+// MENU MOBILE
+const menuToggle = document.querySelector("#menu-toggle");
+const headerNav = document.querySelector("#header-nav");
+
+if (menuToggle && headerNav) {
+    menuToggle.addEventListener("click", function () {
+        headerNav.classList.toggle("nav-links--active");
+
+        const aberto = headerNav.classList.contains("nav-links--active");
+
+        menuToggle.setAttribute("aria-expanded", aberto);
+        menuToggle.setAttribute(
+            "aria-label",
+            aberto ? "Fechar menu" : "Abrir menu"
+        );
+    });
+
+    // Fecha o menu quando um link é selecionado.
+    headerNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            headerNav.classList.remove("nav-links--active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Abrir menu");
+        });
+    });
+
+    // Fecha o menu ao voltar para a tela desktop.
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+            headerNav.classList.remove("nav-links--active");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+
+// ALTERNADOR MANUAL DE TEMA
+const themeToggle = document.querySelector("#theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+if (themeToggle && themeIcon) {
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("light-theme");
+
+        const temaClaro = document.body.classList.contains("light-theme");
+
+        themeIcon.textContent = temaClaro ? "☀️" : "🌙";
+
+        themeToggle.setAttribute(
+            "aria-label",
+            temaClaro ? "Ativar tema escuro" : "Ativar tema claro"
+        );
+    });
+}

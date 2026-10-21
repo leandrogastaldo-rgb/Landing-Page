@@ -1366,3 +1366,18 @@ body.light-theme .navbar {
 .btn-icon:hover {
     background: var(--bg-card);
 }
+
+
+/* Botão do menu mobile: oculto em telas grandes */
+.btn-menu {
+    display: none;
+}
+
+/* Exibe o botão apenas em celulares e tablets */
+@media (max-width: 868px) {
+    .btn-menu {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

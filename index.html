@@ -1,42 +1,95 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Paty Calçados — O estilo que combina com você</title>
 
-    <meta name="description" content="Conheça a Paty Calçados. Encontre estilo, conforto e qualidade em calçados femininos.">
-    <meta name="keywords" content="Paty Calçados, calçados femininos, sapatos, moda feminina, Cianorte">
-    <meta name="author" content="Paty Calçados">
+    <!-- SEO TÉCNICO E INDEXAÇÃO -->
+    <meta
+        name="description"
+        content="Paty Calçados: encontre calçados femininos com estilo, conforto e qualidade para combinar com você."
+    >
+
+    <meta
+        name="keywords"
+        content="Paty Calçados, calçados femininos, sapatos femininos, calçados, moda feminina, Cianorte"
+    >
+
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://patycalcadoscianorte.com.br/">
+    <!-- URL CANÔNICA: substituir pela URL definitiva após a publicação -->
+    <link rel="canonical" href="https://seu-site.vercel.app/">
 
-    <meta property="og:title" content="Paty Calçados — O estilo que combina com você">
-    <meta property="og:description" content="Estilo e conforto para acompanhar você em todos os momentos.">
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
 
+    <meta
+        property="og:title"
+        content="Paty Calçados — O estilo que combina com você"
+    >
+
+    <meta
+        property="og:description"
+        content="Calçados femininos com estilo, conforto e qualidade para combinar com você."
+    >
+
+    <meta
+        property="og:image"
+        content="https://seu-site.vercel.app/imagensite.png.png"
+    >
+
+    <meta
+        property="og:url"
+        content="https://seu-site.vercel.app/"
+    >
+
+    <!-- CSS ORIGINAL -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- CABEÇALHO -->
-    
+
+    <!-- CABEÇALHO ORIGINAL -->
     <header class="navbar">
-        <a href="#" class="logo">Paty Calçados</a>
+
+        <a href="#" class="logo">
+            Paty Calçados
+        </a>
 
         <nav class="nav-links" id="header-nav">
-            <a href="#beneficios">Benefícios</a>
-            <a href="#especificacoes">Especificações</a>
-            <a href="#faq">FAQ</a>
-            <a href="#produto" class="nav-button">Comprar</a>
-            <a href="#newsletter">Novidades</a>
+
+            <a href="#beneficios">
+                Benefícios
+            </a>
+
+            <a href="#especificacoes">
+                Especificações
+            </a>
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+            <a href="#produto" class="nav-button">
+                Comprar
+            </a>
+
+            <a href="#newsletter">
+                Novidades
+            </a>
+
         </nav>
 
+        <!-- Botões de tema e menu -->
         <div class="header__actions">
+
             <button
                 type="button"
                 id="theme-toggle"
@@ -56,207 +109,224 @@
             >
                 <span class="hamburger"></span>
             </button>
+
         </div>
+
     </header>
 
-
     <main>
-        <!-- APRESENTAÇÃO -->
-        <section class="hero" id="inicio">
-            <div class="hero__content">
-                <span class="tag">✨ Estilo para todos os momentos</span>
 
-                <h1>O estilo que combina <span>com você.</span></h1>
+        <!-- HERO ORIGINAL -->
+        <section class="hero" id="produto">
 
-                <p>
-                    Na Paty Calçados, você encontra beleza, conforto e
-                    personalidade para completar o seu visual.
+            <div class="hero-content">
+
+                <span class="launch-tag">
+                    Novo Lançamento
+                </span>
+
+                <h1>
+                    O estilo que combina<br>
+                    com você
+                </h1>
+
+                <p class="subtitle">
+                    Descubra nossa nova coleção de calçados com
+                    conforto, elegância e estilo para todos os momentos.
                 </p>
 
-                <a href="#produto" class="cta">Conheça nosso destaque</a>
+                <div class="price">
+                    R$ 299,00
+                </div>
+
+                <a href="#beneficios" class="cta">
+                    Garantir o Meu 🚀
+                </a>
+
             </div>
 
-            <div class="hero__image">
+            <div class="product-image">
+
                 <img
                     src="imagensite.png.png"
-                    alt="Destaque de calçados da Paty Calçados"
+                    alt="Calçado feminino Paty Calçados"
+                    loading="lazy"
                     width="631"
                     height="436"
                 >
+
             </div>
+
         </section>
 
-        <!-- BENEFÍCIOS -->
-        <section class="section" id="beneficios">
-            <div class="section__heading">
-                <span class="tag">Por que escolher a Paty?</span>
-                <h2>Seu próximo calçado favorito</h2>
-                <p>Detalhes que fazem a diferença na hora de escolher.</p>
-            </div>
+        <!-- BENEFÍCIOS ORIGINAIS -->
+        <section class="benefits-section" id="beneficios">
 
-            <div class="benefits-grid">
-                <article class="card">
-                    <div class="card__icon">👠</div>
-                    <h3>Estilo</h3>
-                    <p>
-                        Modelos que ajudam você a expressar sua personalidade
-                        em diferentes ocasiões.
-                    </p>
-                </article>
+            <div class="benefits-header">
 
-                <article class="card">
-                    <div class="card__icon">💗</div>
-                    <h3>Conforto</h3>
-                    <p>
-                        Opções pensadas para acompanhar sua rotina com
-                        praticidade e beleza.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card__icon">✨</div>
-                    <h3>Versatilidade</h3>
-                    <p>
-                        Escolhas que combinam com diferentes looks e
-                        momentos do seu dia.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- PRODUTO EM DESTAQUE -->
-        <section class="section product-section" id="produto">
-            <div class="section__heading">
-                <span class="tag">Destaque</span>
-                <h2>Encontre seu novo favorito</h2>
-                <p>Confira os detalhes do modelo apresentado.</p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card__image">
-                    <img
-                        src="imagensite.png.png"
-                        alt="Calçado em destaque da Paty Calçados"
-                        width="631"
-                        height="436"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="product-card__content">
-                    <span class="product-label">Coleção em destaque</span>
-                    <h3>Estilo e conforto para você</h3>
-
-                    <p>
-                        Um modelo para complementar seu visual e trazer
-                        mais personalidade às suas produções.
-                    </p>
-
-                    <ul class="product-details">
-                        <li><strong>Numeração:</strong> 34 ao 39</li>
-                        <li><strong>Material:</strong> Sintético</li>
-                        <li><strong>Solado:</strong> Antiderrapante</li>
-                    </ul>
-
-                    <a
-                        href="https://wa.me/"
-                        class="cta"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Consulte pelo WhatsApp
-                    </a>
-
-                    <small>
-                        Consulte disponibilidade, numeração e preço com a loja.
-                    </small>
-                </div>
-            </div>
-        </section>
-
-        <!-- ESPECIFICAÇÕES -->
-        <section class="section" id="especificacoes">
-            <div class="section__heading">
-                <span class="tag">Detalhes</span>
-                <h2>O que você precisa saber</h2>
-            </div>
-
-            <div class="specifications">
-                <div class="specification">
-                    <span>👟</span>
-                    <div>
-                        <h3>Numeração</h3>
-                        <p>Consulte os tamanhos disponíveis de 34 a 39.</p>
-                    </div>
-                </div>
-
-                <div class="specification">
-                    <span>🧵</span>
-                    <div>
-                        <h3>Material</h3>
-                        <p>Modelo apresentado com material sintético.</p>
-                    </div>
-                </div>
-
-                <div class="specification">
-                    <span>✔️</span>
-                    <div>
-                        <h3>Solado</h3>
-                        <p>Solado antiderrapante, conforme a descrição do modelo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PERGUNTAS FREQUENTES -->
-        <section class="section" id="faq">
-            <div class="section__heading">
-                <span class="tag">Dúvidas</span>
-                <h2>Perguntas frequentes</h2>
-            </div>
-
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Quais numerações estão disponíveis?</summary>
-                    <p>
-                        O modelo apresentado contempla a numeração do 34 ao 39.
-                        Consulte a loja para confirmar o estoque.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Como consultar o preço do produto?</summary>
-                    <p>
-                        Entre em contato com a Paty Calçados para consultar
-                        o preço atualizado e a disponibilidade.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Como posso entrar em contato com a loja?</summary>
-                    <p>
-                        Utilize o canal de WhatsApp disponibilizado pela loja
-                        para tirar dúvidas sobre os produtos.
-                    </p>
-                </details>
-            </div>
-        </section>
-
-        <!-- NEWSLETTER DEMONSTRATIVA -->
-        <section class="newsletter" id="newsletter">
-            <div class="newsletter__container">
-                <span class="newsletter__tag">💌 Fique por dentro</span>
-
-                <h2>Receba novidades da Paty Calçados</h2>
+                <h2>
+                    Por que escolher o nosso produto?
+                </h2>
 
                 <p>
-                    Cadastre seu e-mail nesta demonstração e veja como
-                    funciona a interação do formulário.
+                    Conforto, estilo e qualidade para todos os momentos.
                 </p>
 
-                <form class="newsletter__form">
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <div class="emoji">👠</div>
+
+                    <h3>Conforto</h3>
+
+                    <p>
+                        Calçados pensados para proporcionar conforto durante todo o dia.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="emoji">✨</div>
+
+                    <h3>Estilo</h3>
+
+                    <p>
+                        Design moderno e elegante para combinar com todos os seus momentos.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="emoji">💎</div>
+
+                    <h3>Qualidade</h3>
+
+                    <p>
+                        Materiais selecionados e acabamento pensado para oferecer qualidade.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ESPECIFICAÇÕES ORIGINAIS -->
+        <section class="specifications" id="especificacoes">
+
+            <h2>Especificações</h2>
+
+            <div class="spec-grid">
+
+                <span>Tamanhos: 34 ao 39</span>
+
+                <span>Material: sintético</span>
+
+                <span>Solado: antiderrapante</span>
+
+                <span>Fechamento: conforme o modelo</span>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ ORIGINAL -->
+        <section class="faq-section" id="faq">
+
+            <div class="faq-container">
+
+                <h2>Perguntas Frequentes</h2>
+
+                <p class="faq-subtitle">
+                    Confira as principais dúvidas sobre nossos calçados.
+                </p>
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Quais tamanhos estão disponíveis?
+                        </summary>
+
+                        <p>
+                            Trabalhamos com tamanhos do 34 ao 39.
+                            Consulte a disponibilidade do modelo desejado.
+                        </p>
+
+                    </details>
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Qual é o material dos calçados?
+                        </summary>
+
+                        <p>
+                            Nossos calçados são produzidos em material sintético,
+                            buscando unir estilo, praticidade e conforto.
+                        </p>
+
+                    </details>
+
+                    <details class="faq-item">
+
+                        <summary>
+                            O solado é antiderrapante?
+                        </summary>
+
+                        <p>
+                            Sim. Os modelos apresentados possuem solado
+                            antiderrapante.
+                        </p>
+
+                    </details>
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Como escolher o tamanho correto?
+                        </summary>
+
+                        <p>
+                            Recomendamos conferir as medidas disponíveis para o
+                            modelo escolhido antes de finalizar a compra.
+                        </p>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NOVA SEÇÃO: NEWSLETTER DA ATIVIDADE -->
+        <section class="newsletter" id="newsletter">
+
+            <div class="newsletter__container">
+
+                <h2>
+                    Receba Ofertas Exclusivas e Novidades
+                </h2>
+
+                <p>
+                    Cadastre seu e-mail para conhecer nossas novidades
+                    e receber informações sobre ofertas da Paty Calçados.
+                </p>
+
+                <form class="newsletter__form" action="#" method="post">
+
                     <div class="newsletter__field">
-                        <label for="email-input">Seu e-mail</label>
+
+                        <label for="email-input">
+                            Seu e-mail
+                        </label>
 
                         <input
                             type="email"
@@ -267,33 +337,35 @@
                             autocomplete="email"
                             required
                         >
+
                     </div>
 
-                    <button type="submit" class="btn--form">
-                        Quero Desconto 🎁
+                    <button
+                        type="submit"
+                        class="btn--form"
+                    >
+                        Quero Receber Novidades
                     </button>
+
                 </form>
 
+                <p class="newsletter__message" id="newsletter-message" role="status" aria-live="polite"></p>
+
                 <small>
-                    Demonstração acadêmica: o e-mail não será cadastrado
-                    nem enviado para um servidor.
+                    Demonstração acadêmica: o e-mail não será enviado nem armazenado.
                 </small>
 
-                <p
-                    class="newsletter__message"
-                    id="newsletter-message"
-                    role="status"
-                    aria-live="polite"
-                ></p>
             </div>
+
         </section>
+
     </main>
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
-        <a href="#inicio" class="logo">Paty <span>Calçados</span></a>
-        <p>O estilo que combina com você.</p>
-        <p>&copy; 2026 Paty Calçados. Todos os direitos reservados.</p>
+    <!-- RODAPÉ ORIGINAL -->
+    <footer>
+        © 2026 Paty Calçados. Todos os direitos reservados.
     </footer>
+
 </body>
+
 </html>

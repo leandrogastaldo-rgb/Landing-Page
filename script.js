@@ -124,7 +124,7 @@ inputEmail.parentNode.appendChild(feedbackText);
 
 // 3. FUNÇÃO QUE VALIDA O FORMULÁRIO VIA REGEX
 function validarEmail(email) {
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regexEmail = /^[^\s@]+@[^\s@]+\\.[^\s@]+$/;
     return regexEmail.test(email); // Retorna true ou false
 }
 

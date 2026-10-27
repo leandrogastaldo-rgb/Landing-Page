@@ -109,8 +109,8 @@ if (newsletterForm && newsletterMessage) {
 // ==========================================================================
 
 // 1. SELEÇÃO DOS ELEMENTOS DO DOM
-const formNewsletter = document.querySelector('.newsletter__form');
-const inputEmail = document.querySelector('.newsletter__input');
+//const formNewsletter = document.querySelector('.newsletter__form');
+//const inputEmail = document.querySelector('.newsletter__input');
 
 // 2. CRIAÇÃO DINÂMICA DA MENSAGEM DE FEEDBACK
 const feedbackText = document.createElement('small');

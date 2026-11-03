@@ -31,27 +31,6 @@ if (menuToggle && headerNav) {
 // ALTERNADOR DE TEMA CLARO E ESCURO
 // =========================================================
 
-const themeToggle = document.querySelector("#theme-toggle");
-const themeIcon = document.querySelector(".theme-icon");
-
-if (themeToggle && themeIcon) {
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-theme");
-
-        const temaClaroAtivo =
-            document.body.classList.contains("light-theme");
-
-        if (temaClaroAtivo) {
-            themeIcon.textContent = "☀️";
-            themeToggle.setAttribute("aria-label", "Ativar tema escuro");
-            themeToggle.setAttribute("title", "Ativar tema escuro");
-        } else {
-            themeIcon.textContent = "🌙";
-            themeToggle.setAttribute("aria-label", "Ativar tema claro");
-            themeToggle.setAttribute("title", "Ativar tema claro");
-        }
-    });
-}
 
 
 // =========================================================
